@@ -1,3 +1,7 @@
 #!/bin/sh
 source .venv/bin/activate
-python -m flask --app main run -p $PORT --debug
+
+if [ -z "$PORT" ]; then
+  export PORT=9002
+fi
+python -m flask --app main run --debug --port=$PORT
