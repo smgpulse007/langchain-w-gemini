@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baking with the Gemini API</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <main class="container mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-6">Baking with the Gemini API</h1>
+    <form class="space-y-4">
+      <div class="flex space-x-4">
+        <label class="cursor-pointer">
+          <input type="radio" class="hidden" checked name="chosen-image" value="/baked_goods_1.jpg">
+          <img src="/baked_goods_1.jpg" class="w-32 h-32 object-cover border-2 border-transparent hover:border-blue-500 rounded-md">
+        </label>
+        <label class="cursor-pointer">
+          <input type="radio" class="hidden" name="chosen-image" value="/baked_goods_2.jpg">
+          <img src="/baked_goods_2.jpg" class="w-32 h-32 object-cover border-2 border-transparent hover:border-blue-500 rounded-md">
+        </label>
+        <label class="cursor-pointer">
+          <input type="radio" class="hidden" name="chosen-image" value="/baked_goods_3.jpg">
+          <img src="/baked_goods_3.jpg" class="w-32 h-32 object-cover border-2 border-transparent hover:border-blue-500 rounded-md">
+        </label>
+      </div>
+      <div>
+          <input name="prompt" placeholder="Enter instructions here" type="text"
+            value="Provide an example recipe for the baked goods in the image"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <button type="submit"
+      class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+      Go
+      </button>
+    </form>
+    <p class="output mt-6 text-gray-700">(Results will appear here)</p>
+  </main>
+  <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script>
+  <script src="https://unpkg.com/base64-js@1.3.0/base64js.min.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
